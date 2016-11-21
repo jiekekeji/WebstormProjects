@@ -1,0 +1,21 @@
+/*切换的标签部分*/
+.tab-title {
+
+}
+
+.tab-title li {
+    line-height: 30px;
+    float: left;
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    border: solid 1px burlywood;
+}
+
+/*切换的内容部分*/
+.tab-content {
+    clear: both;
+    height: 300px;
+    width: 200px;
+    border: solid 1px brown;
+}
