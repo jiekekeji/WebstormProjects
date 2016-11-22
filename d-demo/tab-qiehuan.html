@@ -5,25 +5,12 @@
     <title>tab页面切换功能</title>
     <link rel="stylesheet" type="text/css" href="../a-basecss/base.css"/>
     <link rel="stylesheet" type="text/css" href="css/tab-qiehuan.css"/>
-    <!--<script>-->
-        <!--/**-->
-         <!--* 菜单的点击-->
-         <!--* @param type-->
-         <!--*/-->
-        <!--function menuClick(type) {-->
-            <!--console.log("type=" + type);-->
-        <!--}-->
-    <!--</script>-->
-    <!--脚本引入-->
-    <script src="../a-require/require.js"></script>
-    <script src="../a-jquery/jquery-1.11.1.min.js"></script>
-    <script src="js/tab-qiehuan.js"></script>
 </head>
 <body>
 <!--切换按钮-->
 <ul class="tab-title">
-    <li onclick="menuClick('menu1');">页面一</li>
-    <li onclick="menuClick('menu2');">页面二</li>
+    <li onclick="menuClick()">页面一</li>
+    <li onclick="menuClick()">页面二</li>
 </ul>
 <!--切换的内容-->
 <div class="tab-content">
@@ -32,5 +19,10 @@
 
 
 
+
+<!--脚本引入-->
+<script src="../a-require/require.js"></script>
+<script src="../a-jquery/jquery-1.11.1.min.js"></script>
+<script src="js/tab-qiehuan.js"></script>
 </body>
 </html>

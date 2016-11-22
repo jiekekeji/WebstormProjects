@@ -8,11 +8,11 @@ $(document).ready(function () {
         console.log("被点击了");
     });
 
-    /**
-     * 菜单的点击
-     * @param type
-     */
-    var menuClick = function (type) {
-        console.log("type=" + type);
-    }
 });
+
+/**
+ * 菜单切换功能
+ */
+function menuClick() {
+    console.log("type=");
+}
