@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>封装</title>
+</head>
+<body>
+
+<script>
+
+    function Dog(name,age,color) {
+        var nick="xiaohuang";
+        
+        function say() {
+            console.log("wangwang");
+        }
+
+        //共有属性
+        this.name=name;
+        this.age=age;
+        this.color=color;
+        this.cry=function () {
+            console.log("wangwang");
+        }
+
+        this.test=function () {
+            say();
+        }
+    }
+
+    var dog=new Dog("小狗",12,"red");
+    dog.cry();
+    dog.age;
+
+    
+    
+</script>
+</body>
+</html>
