@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>路由实例</title>
+    <link href="../../a-basecss/base.css" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+        .title {
+            height: 60px;
+            width: 1080px;
+            background: cadetblue;
+            margin: 0 auto;
+        }
+        .content{
+            height: 300px;
+            width: 1080px;
+            margin: 0 auto;
+        }
+        .content ul{
+            height: 30px;
+            width: 300px;
+            background: rebeccapurple;
+        }
+        .content ul li{
+            width: 100px;
+            height: 30px;
+            background: lavender;
+            float: left;
+            margin: 0px;
+            text-align: center;
+            line-height: 30px;
+        }
+
+    </style>
+</head>
+<body ng-app="mainApp">
+<!--头部-->
+<div class="title">
+</div>
+<div class="content">
+    <ul>
+        <li><a href="#page1">局部1</a></li>
+        <li><a href="#page2">局部2</a></li>
+        <li><a href="#page3">局部3</a></li>
+    </ul>
+    <!--视图挂载点-->
+    <div ui-view style="clear: both">
+
+    </div>
+</div>
+
+
+<!--start 路由依赖包-->
+<script src="../../a-angularjs/angular.js"></script>
+<script src="../../a-angularjs/angular-ui-router.min.js"></script>
+<script src="../../a-angularjs/ocLazyLoad.min.js"></script>
+<!--配置路由js-->
+<script src="./appconfig/appConfig.js"></script>
+<script src="./appconfig/routeConfig.js"></script>
+<!--end 路由依赖包-->
+</body>
+</html>
