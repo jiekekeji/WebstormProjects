@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据列表</title>
+    <link href="../../a-basecss/base.css" rel="stylesheet" type="text/css"/>
+    <style>
+        .list li {
+            width: 300px;
+            height: 40px;
+            border: 1px solid chartreuse;
+            margin-top: 1.5px;
+            list-style: none;
+        }
+
+        .list li button {
+            float: right;
+            margin-top: 10px;
+        }
+
+        .buycar {
+            width: 300px;
+            border: 1px solid rebeccapurple;
+        }
+    </style>
+</head>
+<body ng-app="indexApp" ng-controller="indexCtrl">
+
+<!--商品列表-->
+<!--加上 $index 防止数据有重复报错-->
+<ul class="list" ng-repeat="product in products track by $index">
+    <li>
+        {{product.name}}
+        <button ng-click="add2Car(product)">添加到到购物车</button>
+    </li>
+</ul>
+<!--购物车列表-->
+<div class="buycar">
+    购物车商品个数:{{count}}
+    <ul class="list" ng-repeat="product in buycar track by $index">
+        <li>
+            {{product.name}}
+        </li>
+    </ul>
+</div>
+
+
+<script src="../../a-angularjs/angular.js"></script>
+<script>
+    var myApp = angular.module('indexApp', []);
+    myApp.controller('indexCtrl', function ($scope) {
+        //商品列表
+        $scope.products = [{
+            id: 1,
+            name: 'iphone',
+            count:0
+
+        }, {
+            id: 2,
+            name: '黑莓',
+            count:0
+        }, {
+            id: 3,
+            name: 'amazon',
+            count:0,
+        }];
+        //购物车
+        $scope.buycar = [];
+        //购物车商品个数
+        $scope.count = $scope.buycar.length;
+        //添加到购物车
+        $scope.add2Car = function (product) {
+            //取出对应商品
+            console.log("product="+product);
+            //添加到购物车
+            $scope.buycar.push(product);
+            $scope.count = $scope.buycar.length;
+        }
+    });
+</script>
+
+</body>
+</html>
