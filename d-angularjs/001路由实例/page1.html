@@ -1,4 +1,13 @@
-<div style="height: 200px;width: 300px;background: cadetblue">
-    page1页面
+<div ng-controller="page1Ctrl" style="height: 200px;width: 300px;background: cadetblue">
+    <h4>page1页面</h4>
+    <form novalidate>
+        First Name:<br>
+        <input type="text" ng-model="master.firstName"><br>
+        Last Name:<br>
+        <input type="text" ng-model="master.lastName">
+        <br><br>
+        <button ng-click="reset()">RESET</button>
+        <button ng-click="submit()">submit</button>
+    </form>
 </div>
 <script src="page1Ctrl.js"></script>
