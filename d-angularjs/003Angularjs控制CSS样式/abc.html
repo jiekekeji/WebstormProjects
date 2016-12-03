@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <script src="../../a-angularjs/angular.js"></script>
+    <style>
+        .sky {
+            color:white;
+            background-color:lightblue;
+            padding:20px;
+        }
+        .tomato {
+            background-color:coral;
+            padding:40px;
+        }
+    </style>
+</head>
+<body ng-controller="ctrl">
+
+<p>选择一个类:</p>
+
+<input type="button" value="天空色" ng-click="clickEvent1()" />
+<input type="button" value="番茄色" ng-click="clickEvent2()" />
+
+<div ng-class="{'sky':sky,'tomato':tomato}">
+    <h1>Welcome Home!</h1>
+    <p>I like it!</p>
+</div>
+
+<script type="text/javascript">
+    var myApp = angular.module('myApp',[]);
+    myApp.controller('ctrl', function($scope){
+        $scope.clickEvent1 = function() {
+            $scope.sky = true;
+            $scope.tomato = false;
+        }
+        $scope.clickEvent2 = function() {
+            $scope.sky = false;
+            $scope.tomato = true;
+        }
+    });
+</script>
+
+</body>
+</html>

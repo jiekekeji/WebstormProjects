@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angularjs控制css实例</title>
+    <style>
+        .content {
+            width: 300px;
+            height: 300px;
+            border: 1px solid green;
+        }
+
+        .bkg1sty {
+            background: darkgrey;
+        }
+
+
+        .bordersty {
+            border: 1px solid indigo;
+        }
+
+        .bkgsty {
+            background: darkgrey;
+        }
+
+        .fontsty {
+            font-weight: bold;
+            font-size: 26px;
+        }
+
+    </style>
+</head>
+<body ng-app="indexApp" ng-controller="indexCtrl">
+<!--按钮选项-->
+<button ng-click="click1()">添加单个css类</button>
+<button ng-click="click2()">移除单个css类</button>
+<button ng-click="click3()">添加多个css类</button>
+<button ng-click="click4()">移除多个中的一个css类</button>
+<button ng-click="click5()">移除多个css类</button>
+<!--当bkgsty=true时添加样式bkgsty-->
+<div class="content" ng-class="{'bkg1sty':bkg1sty}">
+    单个样式
+</div>
+<!--当里面对应的值为true时，表示添加该属性，false表示移除该属性-->
+<div class="content" ng-class="{'bkgsty':bkgsty,'bordersty':bordersty,'fontsty':fontsty}">
+    多个样式
+</div>
+
+
+<script src="../../a-angularjs/angular.js"></script>
+<script>
+    var myApp = angular.module('indexApp', []);
+    myApp.controller('indexCtrl', function ($scope) {
+        $scope.click1 = function () {
+            $scope.bkg1sty = true;
+        }
+        $scope.click2 = function () {
+            $scope.bkg1sty = false;
+        }
+        $scope.click3 = function () {
+            $scope.bkgsty = true;
+            $scope.bordersty = true;
+            $scope.fontsty = true;
+        }
+        $scope.click4 = function () {
+            $scope.bkgsty = false;
+        }
+        $scope.click5 = function () {
+            $scope.bordersty = false;
+            $scope.fontsty = false;
+        }
+    });
+</script>
+</body>
+</html>
