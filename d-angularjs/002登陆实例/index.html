@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆</title>
+    <link href="../../a-basecss/base.css" rel="stylesheet" type="text/css"/>
+    <style>
+        .login {
+            height: 400px;
+            width: 400px;
+            border: 1px solid rebeccapurple;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin-left: -200px;
+            margin-top: -200px;
+        }
+
+        .loginform table tr {
+            height: 60px;
+            border-bottom: 1px solid darkgrey;
+        }
+
+        .loginform table tr .row1 {
+            text-align: center;
+            vertical-align: middle;
+            width: 150px;
+            font-weight: bold;
+        }
+
+        .loginform table tr .row2 {
+            width: 250px;
+
+        }
+
+        .loginform table tr .row2 input {
+            width: 200px;
+            height: 30px;;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .inputUserNameOk {
+            border: 1px solid red;
+        }
+
+        .inputCheckCodeOk {
+            border: 1px solid red;
+        }
+
+        .loginform .rbbox li {
+            width: 200px;
+            height: 50px;
+            float: left;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .loginform .btnbox li {
+            width: 200px;
+            height: 100px;
+            float: left;
+        }
+
+        .loginform .btnbox li input {
+            display: block;
+            height: 30px;
+            width: 120px;
+            margin: 0 auto;
+            margin-top: 35px;
+        }
+    </style>
+</head>
+<body ng-app="indexApp" ng-controller="loginCtrl">
+<div class="login">
+    <!--阻止表单的默认提交事件 onsubmit="return false"-->
+    <form action="#" class="loginform" onsubmit="return false">
+        <table>
+            <tr>
+                <td class="row1"><span>用户名:</span></td>
+                <td class="row2">
+                    <!--当inputUserNameOk为true时，添加一个css class-->
+                    <input type="text" name="username" ng-model="user.username" ng-blur="checkUsernmae() "
+                           ng-class="{'inputUserNameOk':inputUserNameOk}">
+                </td>
+            </tr>
+            <tr>
+                <td class="row1">密&nbsp;&nbsp;码:</td>
+                <td class="row2">
+                    <input type="password" name="username" ng-model="user.password">
+                </td>
+            </tr>
+            <tr>
+                <td class=" row1">
+                    验证码:
+                </td>
+                <td class="row2">
+                    <input type="text" name="checkcode" ng-model="user.checkcode" ng-blur="checkCode()"
+                           ng-class="{'inputCheckCodeOk':inputCheckCodeOk}">
+                </td>
+            </tr>
+        </table>
+        <ul class="rbbox">
+            <li>
+                <label for="rbname">记住用户名:</label>
+                <input type="checkbox" id="rbname" ng-true-value="true" ng-false-value="false" ng-model="rbname"/>
+            </li>
+            <li>
+                <label for="rbpasswd">记住密码:</label>
+                <input type="checkbox" id="rbpasswd" ng-true-value="true" ng-false-value="false" ng-model="rbpasswd">
+            </li>
+        </ul>
+        <ul class="btnbox">
+            <li>
+                <input type="reset" value="重置" ng-click="reset()">
+            </li>
+            <li>
+                <input type="submit" value="提交" ng-click="submit()">
+            </li>
+        </ul>
+    </form>
+</div>
+
+<!-- start angular-->
+<script src="../../a-angularjs/angular.js"></script>
+<!-- end angular-->
+<script>
+    var app = angular.module('indexApp', []);
+    app.controller('loginCtrl', function ($scope) {
+        //初始化数据
+        $scope.user = {
+            username: "",
+            password: "",
+            checkcode: ""
+        }
+        $scope.rbname = false;
+        $scope.rbpasswd = false;
+        //用户名输入校验
+        $scope.checkUsernmae = function () {
+            if ("" == $scope.user.username) {
+                $scope.inputUserNameOk = true;
+            } else {
+                $scope.inputUserNameOk = false;
+            }
+
+        }
+        //验证码输入校验码
+        $scope.checkCode = function () {
+            if ("" == $scope.user.checkcode) {
+                $scope.inputCheckCodeOk = true;
+            } else {
+                $scope.inputCheckCodeOk = false;
+            }
+        }
+        //提交表单
+        $scope.submit = function () {
+            var user = $scope.user;
+            if ("" == user.username || "" == user.password || "" == user.checkcode) {
+                alert("请填写完整");
+                return;
+            }
+            console.log("登陆的用户信息:" + $scope.user.toString());
+            console.log("rbname=" + $scope.rbname);
+
+        }
+        //重置
+        $scope.reset = function () {
+            $scope.user.username = "";
+            $scope.user.password = "";
+            $scope.user.checkcode = "";
+            $scope.rbname = false;
+            $scope.rbpasswd = false;
+        }
+
+    });
+</script>
+
+</body>
+</html>
