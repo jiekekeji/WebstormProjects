@@ -1,0 +1,11 @@
+前言:在使用gulp之前先安账号node和npm.
+
+1、全局安装gulp；
+   如果之前已安装先移除：npm rm --global gulp；
+   全局安装:npm install --global gulp.
+
+2、给项目安装gulp,
+   进入到项目根目录，初始化项目：npm init.执行该命令后生成package,json文件。
+   安装gulp:npm install --save-dev gulp.
+
+3、在根目录下新建gulpfile.js文件，
