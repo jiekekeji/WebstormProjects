@@ -1,0 +1,46 @@
+/**************普通变量定义和使用************/
+
+//主体的宽度
+$basewithd: 1080px;
+//菜单栏高度
+$mainmenu: 50px;
+
+//支持嵌套的写法
+#mainmenu {
+  height: $mainmenu;
+  width: $basewithd;
+  margin: 0 auto;
+  background: darkgrey;
+  ul {
+    height: $mainmenu;
+    width: $basewithd;
+    li {
+      height: $mainmenu;
+      width: 120px;
+      margin-left: 10px;
+      background-color: aquamarine;
+      float: left;
+    }
+  }
+}
+
+/**************混合(mixin)定义和使用************/
+@mixin center-block {
+  margin: 0 auto;
+}
+//传参数的
+@mixin opacity($opacity:50) {
+  opacity: $opacity / 100;
+  filter: alpha(opacity=$opacity);
+}
+
+#content {
+  background-color: beige;
+  width: $basewithd;
+  height: 400px;
+  //调用混合(mixin)
+  @include center-block;
+  //传递参数
+  @include opacity(60);
+}
+

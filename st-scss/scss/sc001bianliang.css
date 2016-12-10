@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/**************普通变量定义和使用************/
+#mainmenu {
+  height: 50px;
+  width: 1080px;
+  margin: 0 auto;
+  background: darkgrey; }
+  #mainmenu ul {
+    height: 50px;
+    width: 1080px; }
+    #mainmenu ul li {
+      height: 50px;
+      width: 120px;
+      margin-left: 10px;
+      background-color: aquamarine;
+      float: left; }
+
+/**************混合(mixin)定义和使用************/
+#content {
+  background-color: beige;
+  width: 1080px;
+  height: 400px;
+  margin: 0 auto;
+  opacity: 0.2;
+  filter: alpha(opacity=20); }
+
+/*# sourceMappingURL=sc001bianliang.css.map */
