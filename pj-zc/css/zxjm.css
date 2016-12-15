@@ -1,0 +1,406 @@
+/*start 基础css*/
+.out {
+    width: 100%;
+}
+
+.out > div {
+    width: 1350px;
+    margin: 0 auto;
+}
+
+/*end 基础css*/
+/************start 导航栏**************/
+.navbar {
+    height: 80px;
+    width: 100%;
+    background-color: #f24f24;
+}
+
+.navbd {
+    height: 100%;
+    width: 1350px;
+    margin: 0 auto;
+    /*position: relative;*/
+}
+
+.logo {
+    display: inline-block;
+    margin-top: 6px;
+}
+
+/*菜单栏*/
+.menu {
+    /*position: absolute;*/
+    /*right: 0px;*/
+    float: right;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 80px;
+    width: 100px;
+    height: 80px;
+}
+
+.menu li a:hover {
+    border-bottom: 2px solid yellow;
+    border-width: 2px;
+}
+
+/************end 导航栏**************/
+/*******start 顶部下来那块图片区域**************/
+.topbar {
+    width: 100%;
+    height: 373px;
+}
+
+.topbar > img {
+    height: 373px;
+    width: 100%;
+}
+
+/*******start 顶部下来那块图片区域**************/
+/*******start 标题主样式**********************/
+.zxjm-title {
+    height: 136px;
+    text-align: center;
+    line-height: 136px;
+    font-size: 26px;
+    border-bottom: 1px solid black;
+}
+
+/*******end 标题主样式**********************/
+
+/******start 加盟优势***********************/
+.ys-item {
+    height: 370px;
+}
+
+.ys-item ul {
+    margin-top: 20px;
+    height: 258px;
+    margin-left: 86px;
+}
+
+.ys-item ul > li > a {
+    width: 242px;
+    height: 258px;
+    background-color: #f2f2f2;
+    float: left;
+    margin-right: 70px;
+    background-image: url("../img/0-01.jpg");
+}
+
+/******end 加盟优势***********************/
+
+/******start 加盟申请***********************/
+.shenq-bd {
+    background-color: #f3f3f3;
+    height: 765px;
+}
+
+.req-sq-intro {
+    height: 56px;
+    text-align: center;
+    line-height: 56px;
+    font-size: 18px;
+}
+
+.req-sq-detail {
+    height: 60px;
+    width: 1050px;
+    margin: 0 auto;
+}
+
+.req-sq-tl {
+    height: 56px;
+    width: 1050px;
+    margin: 0 auto;
+    line-height: 56px;
+    font-size: 18px;
+    border-bottom: 1px solid #b0b0b0;
+}
+
+.req-sq-ul {
+    width: 1050px;
+    height: 200px;
+    margin-left: 224px;
+    margin-top: 20px;
+}
+
+.req-sq-ul > li > a {
+    width: 200px;
+    height: 200px;
+    background-color: #cccccc;
+    float: left;
+    margin-right: 148px;
+    background-image: url("../img/1-01.jpg");
+}
+
+.sq-btn {
+    line-height: 56px;
+    text-align: center;
+    display: block;
+    width: 200px;
+    height: 56px;
+    border-radius: 10px;
+    background-color: #ff9933;
+    color: white;
+    font-size: 18px;
+    margin: 0 auto;
+    margin-top: 90px;
+    margin-bottom: 90px;
+
+}
+
+/******end 加盟申请***********************/
+/******start 下载问题*********************/
+.dl-bd {
+    height: 600px;
+}
+
+.dl-left {
+    float: left;
+    width: 804px;
+}
+
+.dl-right {
+    float: right;
+    width: 496px;
+}
+
+.dl-title {
+    font-size: 20px;
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 1px solid #888888;
+}
+
+.dl-title-right {
+
+}
+
+.dl-ul > li > a {
+    color: #888a88;
+    position: relative;
+    display: block;
+    width: 804px;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px dashed #cccccc;
+}
+
+.dl-ul-right > li > a {
+    width: 496px;
+}
+
+.dl-ul > li > a:hover {
+    color: #fe5727;
+}
+
+.dl-ul > li > a > span {
+    position: absolute;
+    right: 0px;
+}
+
+/******end 下载问题*********************/
+/************start 底部橘黄色那块**************/
+.fooer {
+    clear: both;
+    height: 340px;
+    width: 100%;
+    background-color: #fe5727;
+    position: relative;
+}
+
+.footer-bd {
+    height: 340px;
+    width: 1350px;
+    margin: 0 auto;
+}
+
+.footer-bd > ul {
+    width: 1140px;
+    height: 190px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.footer-bd > ul > li {
+    height: 190px;
+    width: 190px;
+    float: left;
+    margin-left: 10px;
+    border-right: 1px solid white;
+    color: white;
+
+}
+
+.footer-bd > ul > li > p {
+    width: 190px;
+    height: 34px;
+    text-align: center;
+}
+
+.footer-bd > ul > li > img {
+    margin-left: 26px;
+}
+
+.footer-bd > ul > li > h4 {
+    width: 190px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.footer-bd > ul > li > ul > li > a {
+    display: block;
+    width: 190px;
+    height: 30px;
+    text-align: center;
+    color: white;
+}
+
+.footer-bd > ul > li > ul > li > a:hover {
+    color: red;
+}
+
+.footer-bd > p {
+    width: 1350px;
+    height: 56px;
+    text-align: center;
+    line-height: 56px;
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0px;
+}
+
+/************end 底部橘黄色那块**************/
+/*<!--start 右边回到顶部底部部分-->*/
+.right-nav {
+    width: 258px;
+    height: 216px;
+    position: fixed;
+    right: 12px;
+    bottom: 160px;
+    z-index: 100;
+}
+
+.right-nav > ul {
+
+    float: right;
+    width: 60px;
+}
+
+.right-nav > ul > li {
+    background-color: #ff8200;
+    height: 54px;
+    font-size: 17px;
+    color: white;
+    text-align: center;
+}
+
+#backtop {
+    visibility: hidden;
+    line-height: 65px;
+    background-repeat: no-repeat;
+    background-image: url("../img/backtop.png");
+    background-position: 11px 5px;
+}
+
+#backfooter {
+    line-height: 54px;
+    background-repeat: no-repeat;
+    background-image: url("../img/backbottom.png");
+    background-position: 12px 36px;
+}
+
+.online-sv {
+    display: none;
+    height: 54px;
+    width: 198px;
+    position: absolute;
+    top: 54px;
+    background-color: #fe5727;
+}
+
+.sv a {
+    display: block;
+    height: 54px;
+    width: 198px;
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    font-size: 16px;
+}
+
+.phone-sv {
+    display: none;
+    height: 54px;
+    width: 198px;
+    position: absolute;
+    top: 108px;
+
+    background-color: #fe5727;
+}
+
+#online-sv:hover {
+    background-color: #fe5727;
+}
+
+#phone-sv:hover {
+    background-color: #fe5727;
+}
+
+/*<!--end 右边回到顶部底部部分-->*/
+
+/*<!--start 左边部分浮动的入口-->*/
+.left-rk {
+    display: none;
+    width: 258px;
+    height: 353px;
+    position: fixed;
+    left: 10px;
+    bottom: 160px;
+    z-index: 10;
+}
+
+.rk-btn-close {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-image: url("../img/close.png");
+}
+
+.left-rk > a {
+    display: block;
+    height: 357px;
+    width: 240px;
+}
+
+/*<!--end 左边部分浮动的入口-->*/
+/*<!--start 挂掉部分-->*/
+.guadiao {
+    display: block;
+    height: 227px;
+    width: 135px;
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+    right: 8px;
+}
+
+.guadiao img {
+    height: 227px;
+    width: 135px;
+}
+
+/*<!--end 挂掉部分-->*/

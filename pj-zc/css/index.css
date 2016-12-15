@@ -146,6 +146,8 @@
     line-height: 300px;
     background-color: white;
     opacity: 0.6;
+    font-size: 30px;
+    color: red;
     visibility: hidden;
 }
 
@@ -341,16 +343,354 @@
     text-align: center;
 }
 
+/*滚动区域*/
 .sell-ac-container {
+    background-color: white;
+    margin-top: 30px;
+    width: 1350px;
     height: 122px;
-    width: 100%;
+    position: relative;
+    clear: both;
+}
+
+.sell-ac-bd {
+    height: 122px;
+    width: 1122px;
+    margin: 0 auto;
+}
+
+.sell-ac-item {
+    float: left;
+    display: block;
+    width: 364px;
+    height: 122px;
+    background-color: white;
+    overflow: hidden;
+    margin-left: 5px;
+}
+
+.sell-ac-item img {
+    width: 175px;
+    height: 122px;
+
+}
+
+.sell-ac-item div {
+    float: right;
+    display: block;
+    width: 182px;
+    height: 122px;
+    border-right: 1px solid black;
+}
+
+.sell-ac-item div p {
+    height: 40px;
+    width: 182px;
+    line-height: 40px;
+    text-indent: 10px;
+}
+
+.sell-ac-item div .sell-date {
+    text-align: center;
 }
 
 /************end 营销活动**************/
-/************start 我们的优势**************/
-.our-advantage {
+/************start 藏品鉴赏**************/
+.cangping-container {
+    width: 100%;
+    height: 406px;
+    clear: both;
+    margin-top: 160px;
+}
+
+.cangping-bd {
     width: 1350px;
+    height: 406px;
+    margin: 0 auto;
+}
+
+.cangping-bd h2 {
+    height: 132px;
+    text-align: center;
+    line-height: 132px;
+    font-size: 26px;
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+.cangping-list {
+    height: 200px;
+    width: 1350px;
+    border-bottom: 1px solid black;
 
 }
 
+.cangping-list > div > div > a {
+    display: inline-block;
+    width: 254px;
+    height: 146px;
+    margin-top: 27px;
+    margin-left: 10px;
+}
+
+/************end 藏品鉴赏**************/
+/************start 我们的优势**************/
+.our-advantage {
+    width: 1350px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.our-advantage h2 {
+    height: 132px;
+    text-align: center;
+    line-height: 132px;
+    font-size: 26px;
+    color: black;
+}
+
+.our-advantage > div > ul > li {
+    float: left;
+}
+
+.our-advantage > div > ul > li > a {
+    display: block;
+}
+
 /************end 我们的优势**************/
+
+/************start 友情链接/合作伙伴**************/
+.friendship {
+    width: 1350px;
+    height: 310px;
+    margin: 0 auto;
+}
+
+.friendship h2 {
+    height: 132px;
+    text-align: center;
+    line-height: 132px;
+    font-size: 26px;
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+.friendship > div {
+    height: 188px;
+}
+
+.friendship > div > ul {
+    margin-top: 56px;
+}
+
+.friendship > div > ul > li {
+    float: left;
+}
+
+.friendship > div > ul > li > a {
+    display: block;
+    width: 213px;
+    height: 70px;
+    margin-left: 10px;
+    border: 1px solid gray;
+}
+
+/************end 友情链接/合作伙伴**************/
+.fooer {
+    height: 340px;
+    width: 100%;
+    background-color: #fe5727;
+    position: relative;
+}
+
+.footer-bd {
+    height: 340px;
+    width: 1350px;
+    margin: 0 auto;
+}
+
+/*.fooer > ul {*/
+/*margin-top: 30px;*/
+/*margin-left: 60px;*/
+/*}*/
+.footer-bd > ul {
+    width: 1140px;
+    height: 190px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.footer-bd > ul > li {
+    height: 190px;
+    width: 190px;
+    float: left;
+    margin-left: 10px;
+    border-right: 1px solid white;
+    color: white;
+
+}
+
+.footer-bd > ul > li > p {
+    width: 190px;
+    height: 34px;
+    text-align: center;
+}
+
+.footer-bd > ul > li > img {
+    margin-left: 26px;
+}
+
+.footer-bd > ul > li > h4 {
+    width: 190px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.footer-bd > ul > li > ul > li > a {
+    display: block;
+    width: 190px;
+    height: 30px;
+    text-align: center;
+    color: white;
+}
+
+.footer-bd > ul > li > ul > li > a:hover {
+    color: red;
+}
+
+.footer-bd > p {
+    width: 1350px;
+    height: 56px;
+    text-align: center;
+    line-height: 56px;
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0px;
+}
+
+/*<!--start 右边回到顶部底部部分-->*/
+.right-nav {
+    width: 258px;
+    height: 216px;
+    position: fixed;
+    right: 12px;
+    bottom: 160px;
+    z-index: 100;
+}
+
+.right-nav > ul {
+
+    float: right;
+    width: 60px;
+}
+
+.right-nav > ul > li {
+    background-color: #ff8200;
+    height: 54px;
+    font-size: 17px;
+    color: white;
+    text-align: center;
+}
+
+#backtop {
+    visibility: hidden;
+    line-height: 65px;
+    background-repeat: no-repeat;
+    background-image: url("../img/backtop.png");
+    background-position: 11px 5px;
+}
+
+#backfooter {
+    line-height: 54px;
+    background-repeat: no-repeat;
+    background-image: url("../img/backbottom.png");
+    background-position: 12px 36px;
+}
+
+.online-sv {
+    display: none;
+    height: 54px;
+    width: 198px;
+    position: absolute;
+    top: 54px;
+    background-color: #fe5727;
+}
+
+.sv a {
+    display: block;
+    height: 54px;
+    width: 198px;
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    font-size: 16px;
+}
+
+.phone-sv {
+    display: none;
+    height: 54px;
+    width: 198px;
+    position: absolute;
+    top: 108px;
+
+    background-color: #fe5727;
+}
+
+#online-sv:hover {
+    background-color: #fe5727;
+}
+
+#phone-sv:hover {
+    background-color: #fe5727;
+}
+
+/*<!--end 右边回到顶部底部部分-->*/
+
+/*<!--start 左边部分浮动的入口-->*/
+.left-rk {
+    width: 258px;
+    height: 353px;
+    position: fixed;
+    left: 10px;
+    bottom: 160px;
+    z-index: 10;
+}
+
+.rk-btn-close {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-image: url("../img/close.png");
+}
+
+.left-rk > a {
+    display: block;
+    height: 357px;
+    width: 240px;
+}
+
+/*<!--end 左边部分浮动的入口-->*/
+/*<!--start 挂掉部分-->*/
+.guadiao {
+    display: none;
+    height: 227px;
+    width: 135px;
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+    right: 8px;
+}
+
+.guadiao img {
+    display: block;
+    height: 227px;
+    width: 135px;
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+    right: 8px;
+}
+
+/*<!--end 挂掉部分-->*/
