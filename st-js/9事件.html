@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件</title>
+</head>
+<body>
+<button id="btn0">点我试试看</button>
+<button id="btn1">点我试试看</button>
+<div id="wdiv">
+    <button id="btn2">点我试试看</button>
+</div>
+
+<script>
+    /*********属性方式**************/
+    var btn0 = document.getElementById("btn0");
+    btn0.onclick = function () {
+        console.log("属性方法监听事件");
+    }
+
+    /*********添加监听器方式**************/
+    var btn1 = document.getElementById("btn1");
+    var clickCallBack = function () {
+        console.log("添加监听器的方式添加事件");
+    }
+    //添加事件，第一个参数事件类型，第二个参数，事件回调函数，第三个参数是否在捕获阶段监听
+    btn1.addEventListener('click', clickCallBack, false);
+    //添加事件，第一个参数事件类型，第二个参数，事件回调函数，
+    // btn1.removeEventListener('click', clickCallBack, false);
+
+
+    /*********事件的目标元素**************/
+    var wdiv = document.getElementById("wdiv");
+    //捕获阶段
+    wdiv.addEventListener('click', function (ev) {
+        //我给的是外层的div设置的点击事件，但是事件目标是button
+        console.log("targe=" + ev.target.tagName);
+    }, true);
+
+
+</script>
+</body>
+</html>

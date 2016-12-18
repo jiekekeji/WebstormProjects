@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="pp" style="height: 300px;width: 300px;border: 1px solid rebeccapurple">
+
+</div>
+
+
+<script src="../a-jquery/jquery-1.11.1.min.js"></script>
+<script>
+    (function (widows) {
+        var loadDialog = widows.loadDialog = {};
+        var dialogdiv = "<div style='z - index:100;width: 500px;height: 400px;position: absolute'>< img src = './img/loading.gif' style = 'position:absolute;left: 50%;top: 50%;margin-left: -16px;margin-top: -16px'/>< /div > ";
+        loadDialog.show = function (prarentElementID) {
+            var pp = $("#" + prarentElementID);
+            console.log(pp);
+            console.log("height=" + pp.height());
+            console.log("width=" + pp.width());
+            pp.append(dialogdiv);
+        }
+
+    })(window);
+</script>
+
+<script>
+    loadDialog.show("pp");
+</script>
+</body>
+</html>

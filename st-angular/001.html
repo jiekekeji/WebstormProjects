@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../a-basecss/base.css" rel="stylesheet" type="text/css"/>
+    <link href="./scss/001.css" rel="stylesheet" type="text/css"/>
+</head>
+<body ng-app="mainApp" ng-controller="mainCtrl">
+<div class="title"></div>
+<div class="main">
+    <!--左边部分-->
+    <div class="pdlist pdlist1">
+        <ul>
+            <div style="z-index: 100;width: 500px;height: 400px;position: absolute">
+                <img src="./img/loading.gif"
+                     style="position:absolute;left: 50%;top: 50%;margin-left: -16px;margin-top: -16px">
+            </div>
+            <li ng-repeat="pd in pd1s">
+                {{pd.title}}
+            </li>
+        </ul>
+
+    </div>
+    <!--右边部分-->
+    <div class="pdlist pdlist2">
+        <ul>
+            <li ng-repeat="pd in pd2s">
+                {{pd.title}}
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="footer">
+
+</div>
+
+
+<script src="../a-angularjs/angular.js"></script>
+<script>
+    var app = angular.module('mainApp', []);
+    app.controller('mainCtrl', function ($scope, $http) {
+        $scope.baseURL = 'http://www.tngou.net/tnfs/api/list';
+        $scope.pd1s = [];
+        $scope.pd2s = [];
+
+
+        $scope.getPd1data = function () {
+
+            $http.jsonp($scope.baseURL + "?page=1&rows=10" + "&callback=JSON_CALLBACK")
+                .success(function (response) {
+                    console.log(response.status);
+                    if (true === response.status) {
+                        $scope.pd1s = response.tngou;
+                    }
+
+                });
+        }
+
+        $scope.getPd2data = function () {
+
+            $http.jsonp($scope.baseURL + "?page=1&rows=10&id=2" + "&callback=JSON_CALLBACK")
+                .success(function (response) {
+                    console.log(response.status);
+                    if (true === response.status) {
+                        $scope.pd2s = response.tngou;
+                        console.log(response.tngou);
+                    }
+
+                });
+        }
+        $scope.getPd1data();
+        $scope.getPd2data();
+
+    });
+</script>
+</body>
+</html>

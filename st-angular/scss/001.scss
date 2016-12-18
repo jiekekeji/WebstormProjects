@@ -1,0 +1,30 @@
+$basewith: 1080px;
+@mixin contentpt() {
+  width: $basewith;
+  margin: 0 auto;
+}
+
+.title {
+  @include contentpt;
+  height: 100px;
+  background-color: beige;
+}
+
+.main {
+  @include contentpt;
+  height: 400px;
+}
+
+.pdlist {
+  width: 500px;
+  height: 400px;
+  background-color: dimgrey;
+}
+
+.pdlist1 {
+  float: left;
+}
+
+.pdlist2 {
+  float: right;
+}

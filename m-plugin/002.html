@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .out-container {
+            width: 600px;
+            height: 80px;
+            border: 1px solid green;
+            overflow: hidden;
+        }
+
+        .out-container .iner-container {
+            width: 1500px;
+            height: 80px;
+        }
+        .out-container .iner-container .adlist1{
+            display: inline-block;
+        }
+        .out-container .iner-container .adlist1 > ul {
+            margin: 0 0;
+            padding: 0 0;
+            width: 600px;
+            height: 80px;
+            background-color: red;
+        }
+
+        .out-container .iner-container .adlist1 > ul > li {
+            list-style: none;
+            height: 80px;
+            width: 80px;
+            background-color: lightgrey;
+            margin-left: 5px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div class="out-container">
+    <div class="iner-container">
+        <div class="adlist1" id="adlist1">
+            <ul>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+            </ul>
+        </div>
+        <div class="adlist1" id="adlist2">
+            <ul>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="../a-jquery/jquery-1.11.1.min.js"></script>
+<script>
+    var adlist1 = $('#adlist1');
+    console.log(adlist1.get(0).offsetWidth);
+    adlist1.css('margin-left', '-600px');
+    console.log(adlist1.get(0).offsetWidth);
+</script>
+</body>
+</html>
