@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var person = {
+            name: '',
+            getName: function () {
+                return name;
+            },
+            setName: function (nm) {
+                name = nm;
+            }
+        }
+
+        var student = {
+            cj: 0,
+            getCj: function () {
+                return cj;
+            },
+            setCj: function (cjj) {
+                cj = cjj;
+            }
+        }
+
+        student.__proto__ = person;
+
+        console.log(student.setCj(15));
+        console.log(student.getCj());
+        //原型链的方法
+        console.log(student.setName("jack"));
+        console.log(student.getName());
+
+//        直接是对象也谈不上静态方法了
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

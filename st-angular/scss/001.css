@@ -1,0 +1,23 @@
+.title {
+  width: 1080px;
+  margin: 0 auto;
+  height: 100px;
+  background-color: beige; }
+
+.main {
+  width: 1080px;
+  margin: 0 auto;
+  height: 400px; }
+
+.pdlist {
+  width: 500px;
+  height: 400px;
+  background-color: dimgrey; }
+
+.pdlist1 {
+  float: left; }
+
+.pdlist2 {
+  float: right; }
+
+/*# sourceMappingURL=001.css.map */
