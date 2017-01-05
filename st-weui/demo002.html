@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="weui-style/weui.css"/>
+</head>
+<body>
+<!--<div class="page-hd">-->
+    <!--<h1 class="page-hd-title">-->
+        <!--搜索-->
+    <!--</h1>-->
+    <!--<p class="page-hd-desc"></p>-->
+<!--</div>-->
+<div class="searchbar_wrap">
+</div>
+
+<script src="js/zepto.min.js"></script>
+<script>
+    $(function () {
+
+        $('.searchbar_wrap').searchBar({
+            cancelText: "取消",
+            searchText: '关键字',
+            onfocus: function (value) {
+
+            },
+            onblur: function (value) {
+
+            },
+            oninput: function (value) {
+
+            },
+            onsubmit: function (value) {
+            },
+            oncancel: function () {
+
+            },
+
+            onclear: function () {
+
+            }
+        });
+    });
+</script>
+</body>
+</html>
