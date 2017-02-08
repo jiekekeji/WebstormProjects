@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .clearfix:before, .clearfix:after {
+            content: "";
+            display: block;
+        }
+
+        .clearfix:after {
+            clear: both;
+            overflow: hidden;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        a {
+            color: #FFF
+        }
+
+        body {
+            font-family: Arial;
+            background: rgb(22, 55, 85) url(images/html.jpg) repeat-x 0 0;;
+        }
+
+        ul {
+            width: 880px;
+            padding: 0 30px;
+            margin: 50px auto;
+        }
+
+        ul li {
+            float: left;
+            width: 180px;
+            padding: 19px;
+            list-style: none;
+            background-color: #fff;
+            border: 1px solid rgba(223, 231, 239, .7);
+            color: rgb(32, 40, 48);
+            text-shadow: 0 1px 1px rgb(255, 255, 255);
+            font-size: 14px;
+            transition: all .2s ease;
+        }
+
+        ul li:hover {
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            transform: scale(1.1);
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            border-radius: 8px;
+            -webkit-box-shadow: 0 -1px 10px rgba(0, 0, 0, .5);
+            -moz-box-shadow: 0 -1px 10px rgba(0, 0, 0, .5);
+            box-shadow: 0 -1px 10px rgba(0, 0, 0, .5);
+        }
+
+        ul li h4 {
+            height: 40px;
+            margin-bottom: 15px;
+            line-height: 40px;
+            font-size: 16px;
+            text-align: center;
+            border-bottom: 1px solid rgba(223, 231, 239, .7);
+        }
+
+        ul li p {
+            text-align: center;
+        }
+
+        ul li p.btn a {
+            display: inline-block;
+            padding: 10px 40px;
+            margin-top: 15px;
+            text-shadow: 0 1px 1px rgba(32, 40, 48, .8);
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            background-color: rgb(229, 195, 85);
+            /*background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(229, 195, 85)), to(rgb(187, 160, 71)));*/
+            /*background-image: -moz-linear-gradient(left top, left bottom, rgb(229, 195, 85), rgb(187, 160, 71));*/
+            /*background-image: linear-gradient(left top, left bottom, rgb(229, 195, 85), rgb(187, 160, 71));*/
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            border-radius: 8px;
+            transition: all .2s ease;
+        }
+
+        ul li p.btn a:hover {
+            -webkit-box-shadow: 0 -1px 10px rgba(0, 0, 0, .5);
+            -moz-box-shadow: 0 -1px 10px rgba(0, 0, 0, .5);
+            box-shadow: 0 -1px 10px rgba(0, 0, 0, .5);
+        }
+
+        ul li p.btn-yellow a {
+            background-color: rgb(218, 109, 14);
+            background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 153, 0)), to(rgb(190, 75, 26)));
+            /*background-image: -moz-linear-gradient(left top, left bottom, rgb(255, 153, 0), rgb(190, 75, 26));*/
+            /*background-image: linear-gradient(left top, left bottom, rgb(255, 153, 0), rgb(190, 75, 26));*/
+        }
+
+        ul li p.btn-red a {
+            background-color: rgb(188, 72, 72);
+            background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(188, 72, 72)), to(rgb(126, 49, 49)));
+            /*background-image: -moz-linear-gradient(left top, left bottom, rgb(188, 72, 72), rgb(126, 49, 49));*/
+            /*background-image: linear-gradient(left top, left bottom, rgb(188, 72, 72), rgb(126, 49, 49));*/
+        }
+
+        ul li p.btn-purple a {
+            background-color: rgb(122, 104, 166);
+            background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(122, 104, 166)), to(rgb(91, 78, 127)));
+            /*background-image: -moz-linear-gradient(left top, left bottom, rgb(122, 104, 166), rgb(91, 78, 127));*/
+            /*background-image: linear-gradient(left top, left bottom, rgb(122, 104, 166), rgb(91, 78, 127));*/
+        }
+
+        #n {
+            margin: 10px auto;
+            width: 920px;
+            border: 1px solid #CCC;
+            font-size: 12px;
+            line-height: 30px;
+        }
+
+        #n a {
+            padding: 0 4px;
+            color: #FFF
+        }
+    </style>
+</head>
+<body>
+
+<!-- 实例 代码 开始 -->
+<p>&nbsp;</p>
+
+
+<ul class="clearfix">
+    <li>
+        <h4>标题</h4>
+        <p>内容信息</p>
+        <p>内容信息</p>
+        <p>内容信息</p>
+        <p class="btn"><a href="">按钮</a></p>
+    </li>
+    <li>
+        <h4>标题</h4>
+        <p>内容信息</p>
+        <p>内容信息</p>
+        <p>内容信息</p>
+        <p class="btn"><a href="">按钮</a></p>
+    </li>
+    <li>
+        <h4>标题</h4>
+        <p>内容信息</p>
+        <p>内容信息</p>
+        <p>内容信息</p>
+        <p class="btn"><a href="">按钮</a></p>
+    </li>
+    <li>
+        <h4>标题</h4>
+        <p>内容信息</p>
+        <p>内容信息</p>
+        <p>内容信息</p>
+        <p class="btn"><a href="">按钮</a></p>
+    </li>
+</ul>
+
+
+<!-- 代码 结束 -->
+
+</body>
+</html>
