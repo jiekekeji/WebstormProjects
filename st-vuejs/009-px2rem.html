@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+    </title>
+    <style>
+        .container {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+        }
+
+        .top {
+            height: 120px;
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        .top > p {
+            text-align: center;
+        }
+
+        .top > input {
+            height: 20px;
+            width: 280px;
+            margin-left: 160px;
+        }
+
+        .contanier {
+            height: 200px;
+            width: 800px;
+            position: fixed;
+            margin: 0 auto;
+            top: 140px;
+            left: 50%;
+            margin-left: -400px;
+        }
+
+        .left {
+            float: left;
+            height: 200px;
+            width: 300px;
+            border: 1px solid grey;
+        }
+
+        .right {
+            float: right;
+            height: 200px;
+            width: 300px;
+            border: 1px solid grey;
+        }
+
+        .convert1 {
+            position: absolute;
+            left: 300px;
+            height: 100px;
+            top: 0px;
+            width: 200px;
+            /*border: 1px solid grey;*/
+        }
+
+        .convert2 {
+            position: absolute;
+            left: 300px;
+            height: 100px;
+            top: 101px;
+            width: 200px
+        }
+    </style>
+</head>
+<body id="app">
+<div class="container">
+    <div class="top">
+        <p>px转rem：元素的css尺寸rem=设计稿标注尺寸px/设计稿横向分辨率*10</p>
+        <p>输入设计稿横向分辨率:</p>
+        <input type="number" v-model="designW" style="font-size: 18px;height: 30px;">
+    </div>
+    <div class="contanier">
+        <div class="left">
+            <p style="text-align: center">设计稿元素尺寸：px</p>
+            <input style="height: 90px;width: 280px;font-size: 28px;text-align: center" type="number"
+                   v-model="elementSize">
+        </div>
+        <button class="convert1" v-on:click="convertPx3Rem()">转换</button>
+        <button class="convert2" v-on:click="clearData()">清除</button>
+        <div class="right">
+            <p style="text-align: center">转化后的结果：rem</p>
+            <input v-model="resultSize"
+                   style="height: 90px;width: 280px;font-size: 28px;text-align: center;float: right" type="number">
+        </div>
+    </div>
+
+
+</div>
+</body>
+<script src="libs/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            designW: 0,
+            elementSize: 0,
+            resultSize: 0
+        },
+        methods: {
+            convertPx3Rem: function () {
+                if (this.designW === 0) {
+                    alert('设计稿横向尺寸没输入!')
+                }
+                if (this.elementSize === 0) {
+                    alert('元素尺寸没输入!')
+                }
+                this.resultSize = this.elementSize / this.designW * 100;
+            },
+
+            clearData: function () {
+                this.elementSize = 0;
+                this.resultSize = 0;
+            }
+        },
+        //正常请求下，页面加载完成后请求接口数据
+        ready: function () {
+        }
+
+
+    })
+
+
+</script>
+</body>
+</html>
