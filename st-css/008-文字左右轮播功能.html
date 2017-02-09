@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文字左右轮播功能</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: relative;
+            height: 100px;
+            width: 600px;
+            border: 1px solid grey;
+            overflow: hidden;
+        }
+
+        .container > ul {
+            position: absolute;
+            left: -20px;
+            height: 100px;
+            width: auto;
+            white-space: nowrap;
+
+        }
+
+        .container > ul > li {
+            height: 100px;
+            width: 100px;
+            border: 1px solid grey;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <ul id="item">
+        <li>人生在世</li>
+        <li>我寄愁心</li>
+        <li>不是花中</li>
+        <li>辛苦遭逢</li>
+        <li>山河破碎</li>
+        <li>惶恐滩头</li>
+        <li>人生自古</li>
+        <li>山河破碎</li>
+        <li>惶恐滩头</li>
+        <li>人生自古</li>
+    </ul>
+</div>
+<script src="../a-jquery/jquery-1.11.1.min.js"></script>
+<script>
+
+
+    function lunbo(id, height) {
+        console.log(id)
+        var ul = $(id);
+        var liFirst = ul.find('li:first');
+        $(id).animate({left: height}).animate({"left": 0}, 0, function () {
+            var clone = liFirst.clone();
+            $(id).append(clone);
+            liFirst.remove();
+        })
+    }
+
+    setInterval("lunbo('#item','-100px')", 3000)
+</script>
+</body>
+</html>
