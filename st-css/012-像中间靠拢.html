@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <style>
+        .contianer {
+            height: 200px;
+            width: 200px;
+            position: relative;
+            background-color: azure;
+        }
+
+        .child {
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            background-color: rebeccapurple;
+        }
+
+        .div1 {
+            left: 5px;
+            top: 5px;
+            animation: div1 1s;
+            animation-fill-mode: forwards;
+        }
+
+        .div2 {
+            right: 5px;
+            top: 5px;
+            animation: div2 1s;
+            animation-fill-mode: forwards;
+        }
+
+        .div3 {
+            right: 5px;
+            bottom: 5px;
+            animation: div3 1s;
+            animation-fill-mode: forwards;
+        }
+
+        .div4 {
+            left: 5px;
+            bottom: 5px;
+            animation: div4 1s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes div1 {
+            from {
+                left: 5px;
+                top: 5px;
+            }
+            to {
+                left: 50px;
+                top: 50px;
+
+            }
+        }
+
+        @keyframes div2 {
+            from {
+                right: 5px;
+                top: 5px;
+            }
+            to {
+                right: 50px;
+                top: 50px;
+
+            }
+        }
+
+        @keyframes div3 {
+            from {
+                right: 5px;
+                bottom: 5px;
+            }
+            to {
+                right: 50px;
+                bottom: 50px;
+
+            }
+        }
+
+        @keyframes div4 {
+            from {
+                right: 5px;
+                top: 5px;
+            }
+            to {
+                left: 50px;
+                bottom: 50px;
+
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="contianer">
+    <div class="child div1"></div>
+    <div class="child div2"></div>
+    <div class="child div3"></div>
+    <div class="child div4"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <style>
+        .hualuo {
+            height: 200px;
+            width: 200px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin-top: -100px;
+            margin-left: -100px;
+            background-color: #9b9b9b;
+        }
+
+        .animSty {
+            animation: div2 1s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes div2 {
+            from {
+                top: 0;
+            }
+            to {
+                left: 50%;
+            }
+        }
+
+        .btn {
+            height: 50px;
+            width: 200px;
+            position: fixed;
+            left: 50%;
+            top: 80%;
+            margin-top: -25px;
+            margin-left: -100px;
+            background-color: #9b9b9b;
+
+        }
+
+        .btnSty {
+            animation: btn2 0.05s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 10
+        }
+
+        @keyframes btn2 {
+            from {
+                transform: rotate(-15deg);
+            }
+            to {
+                transform: rotate(15deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="hualuo animSty">
+
+</div>
+
+<div class="btn btnSty"></div>
+
+</div>
+<script>
+    setTimeout(function () {
+        $('.btn').removeClass('btnSty');
+    }, 0.5 * 1000)
+</script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <style>
+        .box {
+            background-color: darkgrey;
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            bottom: 50%;
+            top: 50%;
+        }
+
+        .animSty {
+            animation: myfirst 5s;
+        }
+
+        @keyframes myfirst {
+            from {
+                background: red;
+                transform: rotate(0deg);
+                left: 50%;
+                right: 50%;
+                bottom: 50%;
+                top: 50%;
+            }
+            to {
+                background: yellow;
+                transform: rotate(12000deg);
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div style="height: 200px;width: 200px;position: relative;">
+    <div class="box ">
+    </div>
+</div>
+
+<button class="btn">放大</button>
+
+<script>
+
+    $('.btn').click(function () {
+        $(".box").addClass('animSty');
+        setTimeout(function () {
+            console.log('动画结束');
+            $(".box").removeClass('animSty')
+        }, 5 * 1000);
+    });
+
+
+</script>
+</body>
+</html>

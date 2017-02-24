@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <style>
+        .contianer {
+            position: fixed;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            left: 100%;
+            background-color: black;
+            opacity: 0.4;
+        }
+
+        .animSty {
+            animation: div2 1s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes div2 {
+            from {
+                left: 100%;
+            }
+            to {
+                left: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="contianer">
+
+</div>
+
+<button class="btn1">查看效果</button>
+<script>
+    $('.btn1').click(function () {
+        $('.contianer').addClass('animSty');
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <style>
+        .box {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background-color: darkgrey;
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+</div>
+
+<button class="btn">放大</button>
+
+<script>
+    $(".box").animate({
+        left: '50%',
+        right: '50%',
+        bottom: '50%',
+        top: '50%',
+    }, 3 * 1000);
+
+    $(".box").animate({
+        left: '0',
+        right: '0',
+        bottom: '0',
+        top: '0',
+    }, 3 * 1000);
+
+    $(".box").animate({
+        left: '50%',
+        right: '50%',
+        bottom: '50%',
+        top: '50%',
+    }, 3 * 1000);
+
+    $('.btn').click(function () {
+        $(".box").animate({
+            left: '0',
+            right: '0',
+            bottom: '0',
+            top: '0',
+        }, 3 * 1000);
+    });
+</script>
+</body>
+</html>

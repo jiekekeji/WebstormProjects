@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .top {
+            height: 50px;
+            width: 100%;
+            background-color: #04be02;
+        }
+
+        .div1 {
+            margin-top: 100px;
+            margin-left: 100px;
+            width: 200px;
+            height: 100px;
+            background-color: rosybrown;
+            /*中心点顺时针旋转30度*/
+            /*transform: rotate(30deg);*/
+            /*中心点为准x延长1.5倍*/
+            /*transform: scaleX(1.5);*/
+            /*中心点为准y延长1.5倍*/
+            /*transform: scaleY(1.5);*/
+            /*中心点为准z延长1.5倍*/
+            /*transform: scaleZ(20);*/
+            /*3D旋转*/
+            /*transform: rotate3d(30, 30, 10, 30deg);*/
+            /*transform: rotateX(60deg);*/
+            transform: rotateY(60deg);
+            transform: rotateZ(60deg);
+            transform: perspective(20px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="div1">
+    <div class="top"></div>
+    <div class="bottom"></div>
+</div>
+
+<div class="div2">
+</div>
+<button>来个动画试试</button>
+
+
+</body>
+
+</html>
